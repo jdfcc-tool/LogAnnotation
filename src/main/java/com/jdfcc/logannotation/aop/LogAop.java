@@ -42,8 +42,9 @@ public class LogAop {
 
 
 
-    @Around("@annotation(com.Cang.annotations.LogAnnotation)")
+    @Around("@annotation(com.jdfcc.logannotation.annotations.LogAnnotation)")
     public Object logPointCut(ProceedingJoinPoint pjp) {
+        System.out.println("进来了");
 //        String filePath = "folder/example.txt";
         long startTime = System.currentTimeMillis();
         Object obj = null;
