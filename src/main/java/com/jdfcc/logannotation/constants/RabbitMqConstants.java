@@ -7,10 +7,6 @@ package com.jdfcc.logannotation.constants;
  */
 public class RabbitMqConstants {
 
-    public static final String CAPTCHAQueue="CAPTCHAQueue";
-    public static final String CAPTCHAExchange="CAPTCHAExchange";
-    public static final String CAPTCHARoutingKey="CAPTCHARoutingKey";
-
     public static final String LogQueue="LogQueue";
     public static final String LogExchange="LogExchange";
     public static final String LogRoutingKey="LogRoutingKey";

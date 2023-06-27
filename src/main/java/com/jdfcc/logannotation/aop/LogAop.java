@@ -1,7 +1,5 @@
 package com.jdfcc.logannotation.aop;
 
-
-
 import com.alibaba.fastjson.JSONObject;
 import com.jdfcc.logannotation.entity.MyLog;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -44,8 +42,6 @@ public class LogAop {
 
     @Around("@annotation(com.jdfcc.logannotation.annotations.LogAnnotation)")
     public Object logPointCut(ProceedingJoinPoint pjp) {
-        System.out.println("进来了");
-//        String filePath = "folder/example.txt";
         long startTime = System.currentTimeMillis();
         Object obj = null;
         //
@@ -66,8 +62,6 @@ public class LogAop {
 
         String time = hour + ":" + minute + ":" + second + "  ";
         String value = time +"method: "+methodName+ " inputArgs" + ": " + JSONObject.toJSONString(pjp.getArgs()) + " " + " " + " outputArgs" + ": " + obj.toString();
-//        writeFile(JSONObject.toJSONString(pjp.getArgs()),obj.toString());
-
 
         MyLog myLog = new MyLog();
         myLog.setValue(value);

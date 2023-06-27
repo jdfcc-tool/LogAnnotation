@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -19,8 +20,6 @@ import static com.jdfcc.logannotation.constants.RabbitMqConstants.LogQueue;
  * @Description LogQueueConsumer
  * @DateTime 2023/6/26 14:23
  */
-
-@Component
 @Slf4j
 public class LogQueueConsumer {
 

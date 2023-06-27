@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.jdfcc.logannotation.config.LogAnnotationConfig,com.jdfcc.logannotation.config.LogQueueConfig

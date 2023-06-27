@@ -35,7 +35,6 @@ public class FileUtil {
             FileWriter fileWriter = new FileWriter(file, true);
             fileWriter.write(value + "\n");
             fileWriter.close();
-            System.out.println("Content appended to file successfully.");
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file.");
             e.printStackTrace();

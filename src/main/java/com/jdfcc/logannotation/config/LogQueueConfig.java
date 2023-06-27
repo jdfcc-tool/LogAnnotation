@@ -1,9 +1,11 @@
 package com.jdfcc.logannotation.config;
 
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
 import static com.jdfcc.logannotation.constants.RabbitMqConstants.*;
 
@@ -12,10 +14,8 @@ import static com.jdfcc.logannotation.constants.RabbitMqConstants.*;
  * @Description 日志队列配置
  * @DateTime 2023/6/26 14:03
  */
-
-@Component
+@Configuration
 public class LogQueueConfig {
-
 
 
     /**
@@ -23,6 +23,7 @@ public class LogQueueConfig {
      */
     @Bean
     public Queue createLogQueue() {
+        System.out.println("@@@@@@@@@@@@@");
         return QueueBuilder.durable(LogQueue).build();
     }
 
