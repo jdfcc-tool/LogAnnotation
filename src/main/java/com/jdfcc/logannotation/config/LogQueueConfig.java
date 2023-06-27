@@ -23,7 +23,6 @@ public class LogQueueConfig {
      */
     @Bean
     public Queue createLogQueue() {
-        System.out.println("@@@@@@@@@@@@@");
         return QueueBuilder.durable(LogQueue).build();
     }
 
